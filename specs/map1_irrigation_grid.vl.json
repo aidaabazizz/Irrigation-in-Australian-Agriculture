@@ -1,0 +1,183 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Map 1. Mapped irrigation area by drainage division (hectares)",
+    "anchor": "start",
+    "font": "Fraunces",
+    "fontSize": 15
+  },
+  "width": 600,
+  "height": 540,
+  "projection": {
+    "type": "conicEqualArea",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -134,
+      0
+    ],
+    "center": [
+      0,
+      -27
+    ],
+    "scale": 900,
+    "translate": [
+      265,
+      270
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/drainage_divisions.json",
+        "format": {
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "color": {
+          "field": "properties.irrigated_ha",
+          "type": "quantitative",
+          "scale": {
+            "type": "sqrt",
+            "scheme": "greens"
+          },
+          "title": "Hectares",
+          "legend": {
+            "format": "~s"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "properties.name",
+            "title": "Drainage division"
+          },
+          {
+            "field": "properties.irrigated_ha",
+            "title": "Mapped irrigation (ha)",
+            "format": ","
+          },
+          {
+            "field": "properties.schemes",
+            "title": "Irrigation areas"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/australia_states.json",
+        "format": {
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "#5b6b70",
+        "strokeWidth": 0.5,
+        "strokeDash": [
+          3,
+          2
+        ]
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "properties.name",
+            "title": "State"
+          },
+          {
+            "field": "properties.crop_ha",
+            "title": "Mapped crop area (ha)",
+            "format": ","
+          },
+          {
+            "field": "properties.irrigated_ha",
+            "title": "Mapped irrigation (ha)",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 143.5,
+            "lat": -31.6,
+            "t": "Murray-Darling Basin"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "align": "center",
+        "color": "#ffffff"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 148.5,
+            "lat": -18.5,
+            "t": "North East Coast"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "align": "left",
+        "color": "#08455f"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Inter",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": false,
+      "domain": false
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "autosize": {
+    "type": "fit-x"
+  },
+  "title": {
+    "text": "Irrigation water applied by crop (megalitres)",
+    "anchor": "start",
+    "font": "Fraunces",
+    "fontSize": 15
+  },
+  "data": {
+    "url": "data/crops_national.json"
+  },
+  "height": 300,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "crop",
+      "sort": {
+        "field": "megalitres",
+        "op": "max",
+        "order": "descending"
+      },
+      "title": null,
+      "axis": {
+        "labelAngle": -35
+      }
+    },
+    "xOffset": {
+      "field": "year"
+    },
+    "y": {
+      "field": "megalitres",
+      "type": "quantitative",
+      "title": "Megalitres (ML)",
+      "axis": {
+        "format": "~s"
+      }
+    },
+    "color": {
+      "field": "year",
+      "title": "Year",
+      "scale": {
+        "domain": [
+          "2019-20",
+          "2020-21"
+        ],
+        "range": [
+          "#c7d3dc",
+          "#34495e"
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "crop"
+      },
+      {
+        "field": "year"
+      },
+      {
+        "field": "megalitres",
+        "format": ","
+      }
+    ]
+  },
+  "config": {
+    "font": "Inter",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": false,
+      "domain": false
+    },
+    "axisY": {
+      "minExtent": 60
+    }
+  }
+}

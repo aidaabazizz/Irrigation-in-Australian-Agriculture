@@ -1,0 +1,110 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Share of mapped crop area by state",
+    "anchor": "start",
+    "font": "Fraunces",
+    "fontSize": 15
+  },
+  "width": "container",
+  "height": 260,
+  "data": {
+    "url": "data/commodity_by_state.json"
+  },
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "hectares",
+          "as": "ha"
+        }
+      ],
+      "groupby": [
+        "state"
+      ]
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "ha",
+          "as": "total"
+        }
+      ]
+    },
+    {
+      "calculate": "datum.ha/datum.total",
+      "as": "share"
+    },
+    {
+      "calculate": "{'ACT':'Australian Capital Territory','NSW':'New South Wales','NT':'Northern Territory','Qld':'Queensland','SA':'South Australia','Tas':'Tasmania','Vic':'Victoria','WA':'Western Australia'}[datum.state]",
+      "as": "name"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "color": "#5b6b70"
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 4,
+        "fontSize": 11
+      },
+      "encoding": {
+        "text": {
+          "field": "share",
+          "format": ".1%"
+        }
+      }
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "name",
+      "sort": "-x",
+      "title": null
+    },
+    "x": {
+      "field": "share",
+      "type": "quantitative",
+      "title": "Share of mapped area",
+      "axis": {
+        "format": "%"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "name",
+        "title": "State"
+      },
+      {
+        "field": "ha",
+        "title": "Hectares",
+        "format": ","
+      },
+      {
+        "field": "share",
+        "format": ".1%"
+      }
+    ]
+  },
+  "config": {
+    "font": "Inter",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": false,
+      "domain": false
+    },
+    "axisY": {
+      "minExtent": 170
+    }
+  }
+}

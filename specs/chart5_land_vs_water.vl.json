@@ -1,0 +1,116 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "autosize": {
+    "type": "fit-x"
+  },
+  "title": {
+    "text": "Land vs water: who is thirsty? (2020-21)",
+    "anchor": "start",
+    "font": "Fraunces",
+    "fontSize": 15
+  },
+  "data": {
+    "url": "data/crops_national.json"
+  },
+  "transform": [
+    {
+      "filter": "datum.year=='2020-21'"
+    }
+  ],
+  "height": 340,
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeDash": [
+          4,
+          4
+        ],
+        "color": "#999"
+      },
+      "data": {
+        "values": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 600000,
+            "y": 2430000
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 150,
+        "opacity": 0.9
+      },
+      "encoding": {
+        "color": {
+          "field": "ml_per_ha",
+          "type": "quantitative",
+          "scale": {
+            "scheme": "blues"
+          },
+          "title": "ML/ha"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -12,
+        "fontSize": 10
+      },
+      "encoding": {
+        "text": {
+          "field": "crop"
+        }
+      }
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "hectares",
+      "type": "quantitative",
+      "title": "Irrigated hectares",
+      "axis": {
+        "format": "~s"
+      }
+    },
+    "y": {
+      "field": "megalitres",
+      "type": "quantitative",
+      "title": "Water applied (ML)",
+      "axis": {
+        "format": "~s"
+      }
+    }
+  },
+  "config": {
+    "font": "Inter",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": false,
+      "domain": false
+    },
+    "axisY": {
+      "minExtent": 60
+    }
+  }
+}

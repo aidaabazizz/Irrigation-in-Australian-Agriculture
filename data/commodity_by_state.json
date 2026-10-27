@@ -1,0 +1,162 @@
+[
+ {
+  "state": "WA",
+  "commodity": "Fruit & nut",
+  "hectares": 16049
+ },
+ {
+  "state": "Qld",
+  "commodity": "Fruit & nut",
+  "hectares": 68651
+ },
+ {
+  "state": "NSW",
+  "commodity": "Fruit & nut",
+  "hectares": 56416
+ },
+ {
+  "state": "Vic",
+  "commodity": "Fruit & nut",
+  "hectares": 48921
+ },
+ {
+  "state": "SA",
+  "commodity": "Fruit & nut",
+  "hectares": 15767
+ },
+ {
+  "state": "Tas",
+  "commodity": "Fruit & nut",
+  "hectares": 1743
+ },
+ {
+  "state": "NT",
+  "commodity": "Fruit & nut",
+  "hectares": 9866
+ },
+ {
+  "state": "NSW",
+  "commodity": "Vegetables & herbs",
+  "hectares": 845
+ },
+ {
+  "state": "WA",
+  "commodity": "Vegetables & herbs",
+  "hectares": 13014
+ },
+ {
+  "state": "Vic",
+  "commodity": "Vegetables & herbs",
+  "hectares": 5938
+ },
+ {
+  "state": "Tas",
+  "commodity": "Vegetables & herbs",
+  "hectares": 291
+ },
+ {
+  "state": "Qld",
+  "commodity": "Vegetables & herbs",
+  "hectares": 3
+ },
+ {
+  "state": "ACT",
+  "commodity": "Vegetables & herbs",
+  "hectares": 12
+ },
+ {
+  "state": "SA",
+  "commodity": "Vegetables & herbs",
+  "hectares": 6449
+ },
+ {
+  "state": "ACT",
+  "commodity": "Fruit & nut",
+  "hectares": 30
+ },
+ {
+  "state": "WA",
+  "commodity": "Sugar cane",
+  "hectares": 429
+ },
+ {
+  "state": "Qld",
+  "commodity": "Sugar cane",
+  "hectares": 531478
+ },
+ {
+  "state": "ACT",
+  "commodity": "Grapes",
+  "hectares": 151
+ },
+ {
+  "state": "WA",
+  "commodity": "Cotton",
+  "hectares": 10
+ },
+ {
+  "state": "WA",
+  "commodity": "Grapes",
+  "hectares": 17260
+ },
+ {
+  "state": "Vic",
+  "commodity": "Grapes",
+  "hectares": 97270
+ },
+ {
+  "state": "SA",
+  "commodity": "Grapes",
+  "hectares": 81843
+ },
+ {
+  "state": "Qld",
+  "commodity": "Cotton",
+  "hectares": 264496
+ },
+ {
+  "state": "Qld",
+  "commodity": "Grapes",
+  "hectares": 2291
+ },
+ {
+  "state": "NSW",
+  "commodity": "Cotton",
+  "hectares": 87137
+ },
+ {
+  "state": "NSW",
+  "commodity": "Grapes",
+  "hectares": 47872
+ },
+ {
+  "state": "NSW",
+  "commodity": "Sugar cane",
+  "hectares": 40592
+ },
+ {
+  "state": "NT",
+  "commodity": "Vegetables & herbs",
+  "hectares": 676
+ },
+ {
+  "state": "NT",
+  "commodity": "Sugar cane",
+  "hectares": 0
+ },
+ {
+  "state": "NT",
+  "commodity": "Cotton",
+  "hectares": 2998
+ },
+ {
+  "state": "NT",
+  "commodity": "Grapes",
+  "hectares": 260
+ },
+ {
+  "state": "Tas",
+  "commodity": "Grapes",
+  "hectares": 3238
+ }
+]

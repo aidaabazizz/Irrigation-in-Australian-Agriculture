@@ -1,0 +1,97 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "autosize": {
+    "type": "fit-x"
+  },
+  "title": {
+    "text": "Murray-Darling Basin share of national irrigation, 2020-21",
+    "anchor": "start",
+    "font": "Fraunces",
+    "fontSize": 15
+  },
+  "data": {
+    "url": "data/crops_mdb.json"
+  },
+  "height": 300,
+  "transform": [
+    {
+      "fold": [
+        "ha_share",
+        "ml_share"
+      ],
+      "as": [
+        "measure",
+        "share"
+      ]
+    }
+  ],
+  "mark": "circle",
+  "encoding": {
+    "y": {
+      "field": "crop",
+      "sort": {
+        "field": "share",
+        "op": "max",
+        "order": "descending"
+      },
+      "title": null
+    },
+    "x": {
+      "field": "share",
+      "type": "quantitative",
+      "title": "Share of national total",
+      "axis": {
+        "format": "%"
+      },
+      "scale": {
+        "domain": [
+          0,
+          1
+        ]
+      }
+    },
+    "color": {
+      "field": "measure",
+      "title": null,
+      "scale": {
+        "domain": [
+          "ha_share",
+          "ml_share"
+        ],
+        "range": [
+          "#2e9e6b",
+          "#0b6e99"
+        ]
+      },
+      "legend": {
+        "labelExpr": "datum.value=='ha_share'?'Share of land':'Share of water'"
+      }
+    },
+    "size": {
+      "value": 140
+    },
+    "tooltip": [
+      {
+        "field": "crop"
+      },
+      {
+        "field": "share",
+        "format": ".0%"
+      }
+    ]
+  },
+  "config": {
+    "font": "Inter",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": false,
+      "domain": false
+    },
+    "axisY": {
+      "minExtent": 170
+    }
+  }
+}

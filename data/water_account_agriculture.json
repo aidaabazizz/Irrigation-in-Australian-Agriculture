@@ -1,0 +1,88 @@
+[
+ {
+  "year": "2014-15",
+  "surface_ml": 1364653,
+  "groundwater_ml": 1890157,
+  "self_extracted_ml": 3254809,
+  "distributed_ml": 7413502,
+  "surface_share": 0.419,
+  "groundwater_share": 0.581
+ },
+ {
+  "year": "2015-16",
+  "surface_ml": 1218609,
+  "groundwater_ml": 2150063,
+  "self_extracted_ml": 3368672,
+  "distributed_ml": 6332073,
+  "surface_share": 0.362,
+  "groundwater_share": 0.638
+ },
+ {
+  "year": "2016-17",
+  "surface_ml": 1530687,
+  "groundwater_ml": 1690548,
+  "self_extracted_ml": 3221235,
+  "distributed_ml": 7520685,
+  "surface_share": 0.475,
+  "groundwater_share": 0.525
+ },
+ {
+  "year": "2017-18",
+  "surface_ml": 1423081,
+  "groundwater_ml": 1958307,
+  "self_extracted_ml": 3381388,
+  "distributed_ml": 8107940,
+  "surface_share": 0.421,
+  "groundwater_share": 0.579
+ },
+ {
+  "year": "2018-19",
+  "surface_ml": 1016459,
+  "groundwater_ml": 2096917,
+  "self_extracted_ml": 3113376,
+  "distributed_ml": 5759349,
+  "surface_share": 0.326,
+  "groundwater_share": 0.674
+ },
+ {
+  "year": "2019-20",
+  "surface_ml": 744620,
+  "groundwater_ml": 1957931,
+  "self_extracted_ml": 2702551,
+  "distributed_ml": 4314141,
+  "surface_share": 0.276,
+  "groundwater_share": 0.724
+ },
+ {
+  "year": "2020-21",
+  "surface_ml": 955014,
+  "groundwater_ml": 1853507,
+  "self_extracted_ml": 2808522,
+  "distributed_ml": 6820259,
+  "surface_share": 0.34,
+  "groundwater_share": 0.66
+ },
+ {
+  "year": "2021-22",
+  "surface_ml": 1045705,
+  "groundwater_ml": 1509115,
+  "self_extracted_ml": 2554820,
+  "distributed_ml": 7334669,
+  "surface_share": 0.409,
+  "groundwater_share": 0.591
+ },
+ {
+  "year": "2022-23",
+  "surface_ml": null,
+  "groundwater_ml": null,
+  "self_extracted_ml": 3892886,
+  "distributed_ml": 6291199
+ },
+ {
+  "year": "2023-24",
+  "surface_ml": null,
+  "groundwater_ml": null,
+  "self_extracted_ml": 4054360,
+  "distributed_ml": 7618045
+ }
+]

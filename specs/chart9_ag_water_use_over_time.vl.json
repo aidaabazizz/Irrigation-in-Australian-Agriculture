@@ -1,0 +1,152 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Water used by agriculture, forestry and fishing, 2014-15 to 2023-24 (megalitres)",
+    "anchor": "start",
+    "font": "Fraunces",
+    "fontSize": 15
+  },
+  "width": "container",
+  "data": {
+    "url": "data/water_account_agriculture.json"
+  },
+  "height": 320,
+  "transform": [
+    {
+      "fold": [
+        "distributed_ml",
+        "self_extracted_ml"
+      ],
+      "as": [
+        "supply",
+        "ml"
+      ]
+    },
+    {
+      "calculate": "datum.supply=='distributed_ml'?'Supplied by water providers':'Pumped by farms themselves'",
+      "as": "source"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "opacity": 0.9,
+        "line": {
+          "strokeWidth": 1
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal",
+          "title": null,
+          "axis": {
+            "labelAngle": -40
+          }
+        },
+        "y": {
+          "field": "ml",
+          "type": "quantitative",
+          "stack": "zero",
+          "title": "Megalitres (ML)",
+          "axis": {
+            "format": "~s"
+          }
+        },
+        "color": {
+          "field": "source",
+          "title": null,
+          "scale": {
+            "domain": [
+              "Supplied by water providers",
+              "Pumped by farms themselves"
+            ],
+            "range": [
+              "#0b6e99",
+              "#8cc9e4"
+            ]
+          },
+          "legend": {
+            "orient": "top"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "year"
+          },
+          {
+            "field": "source"
+          },
+          {
+            "field": "ml",
+            "format": ",",
+            "title": "ML"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "year": "2022-23",
+            "t": "New CSIRO method: compare with caution"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "rule",
+            "strokeDash": [
+              4,
+              3
+            ],
+            "color": "#08455f"
+          },
+          "encoding": {
+            "x": {
+              "field": "year",
+              "type": "ordinal"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -6,
+            "fontSize": 11,
+            "color": "#08455f"
+          },
+          "encoding": {
+            "x": {
+              "field": "year",
+              "type": "ordinal"
+            },
+            "y": {
+              "value": 12
+            },
+            "text": {
+              "field": "t"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "font": "Inter",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": false,
+      "domain": false
+    },
+    "axisY": {
+      "minExtent": 60
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Groundwater vs surface water pumped by farms (share of self-extracted water)",
+    "anchor": "start",
+    "font": "Fraunces",
+    "fontSize": 15
+  },
+  "width": "container",
+  "data": {
+    "url": "data/water_account_agriculture.json"
+  },
+  "height": 300,
+  "transform": [
+    {
+      "filter": "datum.groundwater_share != null"
+    },
+    {
+      "fold": [
+        "groundwater_share",
+        "surface_share"
+      ],
+      "as": [
+        "k",
+        "share"
+      ]
+    },
+    {
+      "calculate": "datum.k=='groundwater_share'?'Groundwater':'Surface water'",
+      "as": "type"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "point": true,
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal",
+          "title": null,
+          "axis": {
+            "labelAngle": -40
+          }
+        },
+        "y": {
+          "field": "share",
+          "type": "quantitative",
+          "title": "Share of water pumped by farms",
+          "axis": {
+            "format": "%"
+          },
+          "scale": {
+            "domain": [
+              0,
+              1
+            ]
+          }
+        },
+        "color": {
+          "field": "type",
+          "title": null,
+          "scale": {
+            "domain": [
+              "Groundwater",
+              "Surface water"
+            ],
+            "range": [
+              "#6d4c9f",
+              "#3fa7d6"
+            ]
+          },
+          "legend": {
+            "orient": "top"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "year"
+          },
+          {
+            "field": "type"
+          },
+          {
+            "field": "share",
+            "format": ".0%"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -10,
+        "fontSize": 10
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal",
+          "title": null,
+          "axis": {
+            "labelAngle": -40
+          }
+        },
+        "y": {
+          "field": "share",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "share",
+          "format": ".0%"
+        },
+        "color": {
+          "field": "type"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Inter",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": false,
+      "domain": false
+    },
+    "axisY": {
+      "minExtent": 60
+    }
+  }
+}

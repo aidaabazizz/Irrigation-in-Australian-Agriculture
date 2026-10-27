@@ -1,0 +1,81 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "autosize": {
+    "type": "fit-x"
+  },
+  "title": {
+    "text": "Hectares irrigated by crop, 2020-21",
+    "anchor": "start",
+    "font": "Fraunces",
+    "fontSize": 15
+  },
+  "data": {
+    "url": "data/crops_national.json"
+  },
+  "transform": [
+    {
+      "filter": "datum.year=='2020-21'"
+    }
+  ],
+  "height": 280,
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "color": "#2e9e6b"
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 4,
+        "fontSize": 11
+      },
+      "encoding": {
+        "text": {
+          "field": "hectares",
+          "format": ",.0f"
+        }
+      }
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "crop",
+      "sort": "-x",
+      "title": null
+    },
+    "x": {
+      "field": "hectares",
+      "type": "quantitative",
+      "title": "Hectares",
+      "axis": {
+        "format": "~s"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "crop"
+      },
+      {
+        "field": "hectares",
+        "format": ","
+      }
+    ]
+  },
+  "config": {
+    "font": "Inter",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": false,
+      "domain": false
+    },
+    "axisY": {
+      "minExtent": 170
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "autosize": {
+    "type": "fit-x"
+  },
+  "title": {
+    "text": "Average water applied per hectare, 2020-21 (ML/ha)",
+    "anchor": "start",
+    "font": "Fraunces",
+    "fontSize": 15
+  },
+  "data": {
+    "url": "data/crops_national.json"
+  },
+  "transform": [
+    {
+      "filter": "datum.year=='2020-21'"
+    }
+  ],
+  "height": 280,
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "color": "#0b6e99"
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 4,
+        "fontSize": 11
+      },
+      "encoding": {
+        "text": {
+          "field": "ml_per_ha",
+          "format": ".1f"
+        }
+      }
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "crop",
+      "sort": "-x",
+      "title": null
+    },
+    "x": {
+      "field": "ml_per_ha",
+      "type": "quantitative",
+      "title": "Megalitres per hectare"
+    },
+    "tooltip": [
+      {
+        "field": "crop"
+      },
+      {
+        "field": "ml_per_ha"
+      }
+    ]
+  },
+  "config": {
+    "font": "Inter",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": false,
+      "domain": false
+    },
+    "axisY": {
+      "minExtent": 170
+    }
+  }
+}

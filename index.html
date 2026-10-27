@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Irrigation in Australian Agriculture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.30.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.21.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.26.0"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Irrigation in Australia</h1>
+      <p class="lede">
+        Australia irrigated 1.9 million hectares in 2020-21. Farms applied 7.8
+        million megalitres of water. That was 37% more than the year before.
+        Where does it go, and where does it come from?
+      </p>
+      <p><small>By Aida Ab Aziz (34597506)</small></p>
+    </header>
+
+    <section>
+      <h2>1. The irrigation footprint</h2>
+      <p>
+        Pasture and cereals take up the most irrigated land. Cotton's area
+        nearly quadrupled when rain returned.
+      </p>
+      <figure><div class="vis" data-spec="map1_irrigation_grid"></div></figure>
+      <p>
+        About 80% of mapped irrigation is in the Murray-Darling Basin. Most of
+        the rest is on the Queensland coast. Dashed lines show state borders.
+        Next, see which crops grow there.
+      </p>
+      <figure>
+        <div class="vis" data-spec="map2_commodity_symbols"></div>
+      </figure>
+      <p>
+        Sugar cane hugs the east coast. Cotton sits inland. Grapes and orchards
+        cluster along the Murray.
+      </p>
+      <figure>
+        <div class="vis" data-spec="map3_irrigation_methods"></div>
+      </figure>
+      <figcaption>
+        This map zooms in on the Murray-Darling Basin. Data comes from an older
+        national survey. About 92% of mapped area has no recorded method.
+      </figcaption>
+      <figure>
+        <div class="vis" data-spec="chart1b_landuse_classes"></div>
+      </figure>
+      <p>Queensland has the most mapped crop area.</p>
+      <figure><div class="vis" data-spec="chart4_state_share"></div></figure>
+      <figure>
+        <div class="vis" data-spec="chart1_irrigated_area"></div>
+        <figcaption>
+          Source: ABS, Water Use on Australian Farms 2020-21.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>2. Which crops are thirstiest?</h2>
+      <p>
+        Cotton's water use rose from 0.4 to 1.3 million megalitres. Cotton now
+        uses more water than fruit and nuts. Rice use rose almost nine-fold.
+      </p>
+      <figure><div class="vis" data-spec="chart2_water_by_crop"></div></figure>
+      <div class="grid">
+        <figure>
+          <div class="vis" data-spec="chart3_ml_per_ha"></div>
+          <figcaption>
+            A megalitre is one million litres. That is about two-fifths of an
+            Olympic pool.
+          </figcaption>
+        </figure>
+        <figure>
+          <div class="vis" data-spec="chart5_land_vs_water"></div>
+          <figcaption>
+            The dashed line marks the national average of 4 ML/ha. Dots above it
+            are thirstier than average.
+          </figcaption>
+        </figure>
+      </div>
+      <figure>
+        <div class="vis" data-spec="chart_mdb_share"></div>
+        <figcaption>
+          The Basin used 63% of irrigation water on these crops.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>3. Where does the water come from?</h2>
+      <p>
+        Channels and pipelines are the biggest water source. River and channel
+        supply jumped in wetter 2020-21.
+      </p>
+      <figure><div class="vis" data-spec="chart6_water_sources"></div></figure>
+      <p>
+        Farms pump much of their own water. Groundwater was the bigger share
+        every year.
+      </p>
+      <figure>
+        <div class="vis" data-spec="chart7_groundwater_vs_surface"></div>
+        <figcaption>
+          The ABS stopped publishing this split after 2021-22. Source: ABS Water
+          Account, Australia 2023-24.
+        </figcaption>
+      </figure>
+      <div class="todo">Chart 8 (farm-size distribution) still needs data.</div>
+    </section>
+
+    <section>
+      <h2>4. Change over time</h2>
+      <p>
+        Water use fell during the recent drought. It rebounded as rain returned.
+        The ABS changed its method in 2022-23.
+      </p>
+      <figure>
+        <div class="vis" data-spec="chart9_ag_water_use_over_time"></div>
+        <figcaption>
+          This covers the whole industry, not only irrigation. Totals are higher
+          than the farm-survey figures. Recycled water, about 1%, is left out.
+          Source: ABS Water Account, Australia 2023-24, Table 2.
+        </figcaption>
+      </figure>
+      <p>Water per hectare has stayed fairly steady.</p>
+      <p>Rice varies most from year to year.</p>
+      <figure>
+        <div class="vis" data-spec="chart10_water_per_hectare_history"></div>
+        <figcaption>
+          Lower means less water per hectare. Weather and crop type also matter.
+          Source: ABS, Water Use on Australian Farms, 2017-18, 2019-20 and
+          2020-21 releases.
+        </figcaption>
+      </figure>
+    </section>
+
+    <footer>
+      <strong>Sources:</strong> Australian Bureau of Statistics,
+      <a
+        href="https://www.abs.gov.au/statistics/industry/agriculture/water-use-australian-farms/latest-release"
+        >Water Use on Australian Farms</a
+      >
+      (CC BY 4.0); ABARES
+      <a
+        href="https://www.agriculture.gov.au/abares/aclump/land-use/catchment-scale-land-use-and-commodities-update-2023"
+        >Catchment Scale Land Use 2023</a
+      >; ABS Water Account, Australia 2023-24 (released 11 December 2025);
+      <a
+        href="https://data.gov.au/data/dataset/australian-irrigation-areas-vector-version-1a-national-land-and-water-resources-audit"
+        >Australian Irrigation Areas</a
+      >.<br />Earlier releases:
+      <a
+        href="https://www.abs.gov.au/statistics/industry/agriculture/water-use-australian-farms/2017-18"
+        >2017-18</a
+      >
+      and
+      <a
+        href="https://www.abs.gov.au/statistics/industry/agriculture/water-use-australian-farms/2019-20"
+        >2019-20</a
+      >.
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

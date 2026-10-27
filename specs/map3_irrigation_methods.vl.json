@@ -1,0 +1,188 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Map 3. How irrigation districts in the Murray-Darling Basin are watered",
+    "anchor": "start",
+    "font": "Fraunces",
+    "fontSize": 15
+  },
+  "width": 600,
+  "height": 560,
+  "projection": {
+    "type": "conicEqualArea",
+    "parallels": [
+      -28,
+      -36
+    ],
+    "rotate": [
+      -145,
+      0
+    ],
+    "center": [
+      0,
+      -31
+    ],
+    "scale": 2400,
+    "translate": [
+      300,
+      280
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/australia_states.json",
+        "format": {
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e3efe9",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "properties.name",
+            "title": "State"
+          },
+          {
+            "field": "properties.crop_ha",
+            "title": "Mapped crop area (ha)",
+            "format": ","
+          },
+          {
+            "field": "properties.irrigated_ha",
+            "title": "Mapped irrigation (ha)",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/irrigation_areas.geojson",
+        "format": {
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "strokeWidth": 0.7,
+        "opacity": 1,
+        "stroke": "#3d5560"
+      },
+      "encoding": {
+        "color": {
+          "field": "properties.method",
+          "title": "Method",
+          "scale": {
+            "domain": [
+              "Flood (cotton)",
+              "Flood (other crops)",
+              "Spray / mixed",
+              "Unknown"
+            ],
+            "range": [
+              "#8d6e63",
+              "#d1495b",
+              "#14a3a1",
+              "#c3ccc8"
+            ]
+          },
+          "legend": {
+            "title": "Watering method",
+            "orient": "right",
+            "symbolType": "square",
+            "symbolSize": 160
+          }
+        },
+        "tooltip": [
+          {
+            "field": "properties.name",
+            "title": "Scheme"
+          },
+          {
+            "field": "properties.method",
+            "title": "Method"
+          },
+          {
+            "field": "properties.km2",
+            "title": "Area (km\u00b2)"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/drainage_divisions.json",
+        "format": {
+          "property": "features"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.properties.code=='D03'"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "#08455f",
+        "strokeWidth": 1.6,
+        "strokeDash": [
+          6,
+          3
+        ]
+      },
+      "encoding": {
+        "tooltip": {
+          "value": "Murray-Darling Basin"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 139.2,
+            "lat": -37.6,
+            "t": "Dashed line: Murray-Darling Basin"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#08455f"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Inter",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": false,
+      "domain": false
+    }
+  }
+}

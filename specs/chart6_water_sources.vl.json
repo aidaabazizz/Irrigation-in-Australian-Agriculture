@@ -1,0 +1,119 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Where farm water comes from (share of each year's total)",
+    "anchor": "start",
+    "font": "Fraunces",
+    "fontSize": 15
+  },
+  "width": "container",
+  "height": 330,
+  "data": {
+    "url": "data/water_sources.json"
+  },
+  "transform": [
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "thousand_ml",
+          "as": "total"
+        }
+      ],
+      "groupby": [
+        "year"
+      ]
+    },
+    {
+      "calculate": "datum.thousand_ml/datum.total",
+      "as": "share"
+    }
+  ],
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "color": {
+          "field": "year",
+          "title": "Year",
+          "scale": {
+            "domain": [
+              "2019-20",
+              "2020-21"
+            ],
+            "range": [
+              "#c7d3dc",
+              "#34495e"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 4,
+        "fontSize": 10
+      },
+      "encoding": {
+        "text": {
+          "field": "share",
+          "format": ".0%"
+        }
+      }
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "source",
+      "sort": {
+        "field": "share",
+        "op": "max",
+        "order": "descending"
+      },
+      "title": null
+    },
+    "yOffset": {
+      "field": "year"
+    },
+    "x": {
+      "field": "share",
+      "type": "quantitative",
+      "title": "Share of total farm water",
+      "axis": {
+        "format": "%"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "source"
+      },
+      {
+        "field": "year"
+      },
+      {
+        "field": "thousand_ml",
+        "title": "Thousand ML",
+        "format": ","
+      },
+      {
+        "field": "share",
+        "format": ".1%"
+      }
+    ]
+  },
+  "config": {
+    "font": "Inter",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": false,
+      "domain": false
+    },
+    "axisY": {
+      "minExtent": 170
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Map 2. Where irrigated-type crops are grown (hectares per 1\u00b0 cell)",
+    "anchor": "start",
+    "font": "Fraunces",
+    "fontSize": 15
+  },
+  "width": 600,
+  "height": 540,
+  "projection": {
+    "type": "conicEqualArea",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -134,
+      0
+    ],
+    "center": [
+      0,
+      -27
+    ],
+    "scale": 900,
+    "translate": [
+      265,
+      270
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/australia_states.json",
+        "format": {
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e3efe9",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "properties.name",
+            "title": "State"
+          },
+          {
+            "field": "properties.crop_ha",
+            "title": "Mapped crop area (ha)",
+            "format": ","
+          },
+          {
+            "field": "properties.irrigated_ha",
+            "title": "Mapped irrigation (ha)",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/commodity_cells.json"
+      },
+      "mark": {
+        "type": "circle",
+        "opacity": 0.65,
+        "stroke": "#fff",
+        "strokeWidth": 0.4
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "hectares",
+          "type": "quantitative",
+          "scale": {
+            "type": "sqrt",
+            "range": [
+              8,
+              1400
+            ]
+          },
+          "title": "Hectares",
+          "legend": {
+            "format": "~s"
+          }
+        },
+        "color": {
+          "field": "commodity",
+          "title": "Commodity",
+          "scale": {
+            "domain": [
+              "Cotton",
+              "Sugar cane",
+              "Grapes",
+              "Fruit & nut",
+              "Vegetables & herbs"
+            ],
+            "range": [
+              "#8d6e63",
+              "#f2c14e",
+              "#b5446e",
+              "#e76f51",
+              "#9bbf3b"
+            ]
+          }
+        },
+        "order": {
+          "field": "hectares",
+          "sort": "descending"
+        },
+        "tooltip": [
+          {
+            "field": "commodity"
+          },
+          {
+            "field": "hectares",
+            "format": ","
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "font": "Inter",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": false,
+      "domain": false
+    }
+  }
+}

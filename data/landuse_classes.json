@@ -1,0 +1,50 @@
+[
+ {
+  "class": "Pulses",
+  "hectares": 27462
+ },
+ {
+  "class": "Fruits",
+  "hectares": 393364
+ },
+ {
+  "class": "Nuts",
+  "hectares": 74267
+ },
+ {
+  "class": "Vegetables and herbs",
+  "hectares": 27228
+ },
+ {
+  "class": "Animals",
+  "hectares": 61494361
+ },
+ {
+  "class": "Other crops",
+  "hectares": 929111
+ },
+ {
+  "class": "Flowers and bulbs",
+  "hectares": 7272
+ },
+ {
+  "class": "Forest",
+  "hectares": 16995
+ },
+ {
+  "class": "Pasture",
+  "hectares": 2405
+ },
+ {
+  "class": "Cereals",
+  "hectares": 128874
+ },
+ {
+  "class": "Oilseeds",
+  "hectares": 3729
+ },
+ {
+  "class": "Mines",
+  "hectares": 36
+ }
+]

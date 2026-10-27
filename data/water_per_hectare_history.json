@@ -1,0 +1,212 @@
+[
+ {
+  "crop": "Rice",
+  "year": "2015-16",
+  "ml_per_ha": 12.1
+ },
+ {
+  "crop": "Cotton",
+  "year": "2015-16",
+  "ml_per_ha": 6.8
+ },
+ {
+  "crop": "Fruit and nuts",
+  "year": "2015-16",
+  "ml_per_ha": 6.5
+ },
+ {
+  "crop": "Sugar cane",
+  "year": "2015-16",
+  "ml_per_ha": 5.6
+ },
+ {
+  "crop": "Grapevines",
+  "year": "2015-16",
+  "ml_per_ha": 4.1
+ },
+ {
+  "crop": "Vegetables",
+  "year": "2015-16",
+  "ml_per_ha": 4.0
+ },
+ {
+  "crop": "Pasture for grazing",
+  "year": "2015-16",
+  "ml_per_ha": 2.9
+ },
+ {
+  "crop": "Rice",
+  "year": "2016-17",
+  "ml_per_ha": 11.4
+ },
+ {
+  "crop": "Cotton",
+  "year": "2016-17",
+  "ml_per_ha": 7.8
+ },
+ {
+  "crop": "Fruit and nuts",
+  "year": "2016-17",
+  "ml_per_ha": 5.9
+ },
+ {
+  "crop": "Sugar cane",
+  "year": "2016-17",
+  "ml_per_ha": 4.6
+ },
+ {
+  "crop": "Grapevines",
+  "year": "2016-17",
+  "ml_per_ha": 3.6
+ },
+ {
+  "crop": "Vegetables",
+  "year": "2016-17",
+  "ml_per_ha": 3.9
+ },
+ {
+  "crop": "Pasture for grazing",
+  "year": "2016-17",
+  "ml_per_ha": 2.6
+ },
+ {
+  "crop": "Rice",
+  "year": "2017-18",
+  "ml_per_ha": 12.0
+ },
+ {
+  "crop": "Cotton",
+  "year": "2017-18",
+  "ml_per_ha": 7.7
+ },
+ {
+  "crop": "Fruit and nuts",
+  "year": "2017-18",
+  "ml_per_ha": 6.0
+ },
+ {
+  "crop": "Sugar cane",
+  "year": "2017-18",
+  "ml_per_ha": 4.8
+ },
+ {
+  "crop": "Grapevines",
+  "year": "2017-18",
+  "ml_per_ha": 3.8
+ },
+ {
+  "crop": "Vegetables",
+  "year": "2017-18",
+  "ml_per_ha": 4.0
+ },
+ {
+  "crop": "Pasture for grazing",
+  "year": "2017-18",
+  "ml_per_ha": 3.0
+ },
+ {
+  "crop": "Rice",
+  "year": "2018-19",
+  "ml_per_ha": 9.9
+ },
+ {
+  "crop": "Cotton",
+  "year": "2018-19",
+  "ml_per_ha": 7.1
+ },
+ {
+  "crop": "Fruit and nuts",
+  "year": "2018-19",
+  "ml_per_ha": 6.2
+ },
+ {
+  "crop": "Sugar cane",
+  "year": "2018-19",
+  "ml_per_ha": 4.5
+ },
+ {
+  "crop": "Grapevines",
+  "year": "2018-19",
+  "ml_per_ha": 4.0
+ },
+ {
+  "crop": "Vegetables",
+  "year": "2018-19",
+  "ml_per_ha": 4.3
+ },
+ {
+  "crop": "Pasture for grazing",
+  "year": "2018-19",
+  "ml_per_ha": 2.9
+ },
+ {
+  "crop": "Rice",
+  "year": "2019-20",
+  "ml_per_ha": 12.2
+ },
+ {
+  "crop": "Cotton",
+  "year": "2019-20",
+  "ml_per_ha": 6.9
+ },
+ {
+  "crop": "Fruit and nuts",
+  "year": "2019-20",
+  "ml_per_ha": 6.2
+ },
+ {
+  "crop": "Sugar cane",
+  "year": "2019-20",
+  "ml_per_ha": 4.7
+ },
+ {
+  "crop": "Grapevines",
+  "year": "2019-20",
+  "ml_per_ha": 3.8
+ },
+ {
+  "crop": "Vegetables",
+  "year": "2019-20",
+  "ml_per_ha": 4.1
+ },
+ {
+  "crop": "Pasture for grazing",
+  "year": "2019-20",
+  "ml_per_ha": 2.7
+ },
+ {
+  "crop": "Rice",
+  "year": "2020-21",
+  "ml_per_ha": 11.9
+ },
+ {
+  "crop": "Cotton",
+  "year": "2020-21",
+  "ml_per_ha": 6.7
+ },
+ {
+  "crop": "Fruit and nuts",
+  "year": "2020-21",
+  "ml_per_ha": 5.7
+ },
+ {
+  "crop": "Sugar cane",
+  "year": "2020-21",
+  "ml_per_ha": 5.0
+ },
+ {
+  "crop": "Grapevines",
+  "year": "2020-21",
+  "ml_per_ha": 4.0
+ },
+ {
+  "crop": "Vegetables",
+  "year": "2020-21",
+  "ml_per_ha": 3.9
+ },
+ {
+  "crop": "Pasture for grazing",
+  "year": "2020-21",
+  "ml_per_ha": 2.9
+ }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "crop": "Pasture/cereal for grazing",
+    "year": "2019-20",
+    "hectares": 460671,
+    "megalitres": 1260160,
+    "ml_per_ha": 2.74
+  },
+  {
+    "crop": "Pasture/cereal for grazing",
+    "year": "2020-21",
+    "hectares": 495779,
+    "megalitres": 1429495,
+    "ml_per_ha": 2.88
+  },
+  {
+    "crop": "Cereals (excl. rice)",
+    "year": "2019-20",
+    "hectares": 158806,
+    "megalitres": 381317,
+    "ml_per_ha": 2.4
+  },
+  {
+    "crop": "Cereals (excl. rice)",
+    "year": "2020-21",
+    "hectares": 320093,
+    "megalitres": 718870,
+    "ml_per_ha": 2.25
+  },
+  {
+    "crop": "Pasture/cereal for hay & silage",
+    "year": "2019-20",
+    "hectares": 187905,
+    "megalitres": 589213,
+    "ml_per_ha": 3.14
+  },
+  {
+    "crop": "Pasture/cereal for hay & silage",
+    "year": "2020-21",
+    "hectares": 210391,
+    "megalitres": 664712,
+    "ml_per_ha": 3.16
+  },
+  {
+    "crop": "Cotton",
+    "year": "2019-20",
+    "hectares": 54865,
+    "megalitres": 379601,
+    "ml_per_ha": 6.92
+  },
+  {
+    "crop": "Cotton",
+    "year": "2020-21",
+    "hectares": 197401,
+    "megalitres": 1326321,
+    "ml_per_ha": 6.72
+  },
+  {
+    "crop": "Fruit & nut (excl. grapes)",
+    "year": "2019-20",
+    "hectares": 172790,
+    "megalitres": 1071134,
+    "ml_per_ha": 6.2
+  },
+  {
+    "crop": "Fruit & nut (excl. grapes)",
+    "year": "2020-21",
+    "hectares": 196906,
+    "megalitres": 1127108,
+    "ml_per_ha": 5.72
+  },
+  {
+    "crop": "Sugar cane",
+    "year": "2019-20",
+    "hectares": 189279,
+    "megalitres": 886878,
+    "ml_per_ha": 4.69
+  },
+  {
+    "crop": "Sugar cane",
+    "year": "2020-21",
+    "hectares": 157521,
+    "megalitres": 795440,
+    "ml_per_ha": 5.05
+  },
+  {
+    "crop": "Grapevines",
+    "year": "2019-20",
+    "hectares": 123987,
+    "megalitres": 469296,
+    "ml_per_ha": 3.79
+  },
+  {
+    "crop": "Grapevines",
+    "year": "2020-21",
+    "hectares": 130534,
+    "megalitres": 516550,
+    "ml_per_ha": 3.96
+  },
+  {
+    "crop": "Vegetables",
+    "year": "2019-20",
+    "hectares": 87332,
+    "megalitres": 356272,
+    "ml_per_ha": 4.08
+  },
+  {
+    "crop": "Vegetables",
+    "year": "2020-21",
+    "hectares": 98785,
+    "megalitres": 382626,
+    "ml_per_ha": 3.87
+  },
+  {
+    "crop": "Rice",
+    "year": "2019-20",
+    "hectares": 5007,
+    "megalitres": 61033,
+    "ml_per_ha": 12.19
+  },
+  {
+    "crop": "Rice",
+    "year": "2020-21",
+    "hectares": 45084,
+    "megalitres": 538365,
+    "ml_per_ha": 11.94
+  }
+]

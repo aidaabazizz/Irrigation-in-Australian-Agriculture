@@ -1,0 +1,146 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Water applied per hectare by crop, 2015-16 to 2020-21",
+    "anchor": "start",
+    "font": "Fraunces",
+    "fontSize": 15
+  },
+  "data": {
+    "url": "data/water_per_hectare_history.json"
+  },
+  "facet": {
+    "field": "crop",
+    "type": "nominal",
+    "title": null,
+    "columns": 4,
+    "sort": [
+      "Rice",
+      "Cotton",
+      "Fruit and nuts",
+      "Sugar cane",
+      "Grapevines",
+      "Vegetables",
+      "Pasture for grazing"
+    ],
+    "header": {
+      "labelFontSize": 12,
+      "labelFontWeight": "bold",
+      "labelAnchor": "start",
+      "labelPadding": 4
+    }
+  },
+  "spec": {
+    "width": 150,
+    "height": 110,
+    "layer": [
+      {
+        "mark": {
+          "type": "line",
+          "color": "#0b6e99",
+          "strokeWidth": 2.5,
+          "point": {
+            "filled": true,
+            "color": "#0b6e99",
+            "size": 40
+          }
+        },
+        "encoding": {
+          "x": {
+            "field": "year",
+            "type": "ordinal",
+            "title": null,
+            "axis": {
+              "labelExpr": "slice(datum.value,2)",
+              "labelAngle": -45,
+              "labelFontSize": 9
+            }
+          },
+          "y": {
+            "field": "ml_per_ha",
+            "type": "quantitative",
+            "title": "Megalitres per hectare",
+            "scale": {
+              "domain": [
+                0,
+                14
+              ]
+            },
+            "axis": {
+              "tickCount": 4
+            }
+          },
+          "tooltip": [
+            {
+              "field": "crop"
+            },
+            {
+              "field": "year"
+            },
+            {
+              "field": "ml_per_ha",
+              "title": "ML per hectare"
+            }
+          ]
+        }
+      },
+      {
+        "transform": [
+          {
+            "filter": "datum.year=='2020-21'"
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "dy": -9,
+          "fontSize": 10,
+          "fontWeight": "bold",
+          "color": "#08455f"
+        },
+        "encoding": {
+          "x": {
+            "field": "year",
+            "type": "ordinal",
+            "title": null,
+            "axis": {
+              "labelExpr": "slice(datum.value,2)",
+              "labelAngle": -45,
+              "labelFontSize": 9
+            }
+          },
+          "y": {
+            "field": "ml_per_ha",
+            "type": "quantitative",
+            "title": "Megalitres per hectare",
+            "scale": {
+              "domain": [
+                0,
+                14
+              ]
+            },
+            "axis": {
+              "tickCount": 4
+            }
+          },
+          "text": {
+            "field": "ml_per_ha",
+            "format": ".1f"
+          }
+        }
+      }
+    ]
+  },
+  "config": {
+    "font": "Inter",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": false,
+      "domain": false
+    },
+    "axisY": {
+      "minExtent": 30
+    }
+  }
+}

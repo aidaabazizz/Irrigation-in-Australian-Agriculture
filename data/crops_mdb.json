@@ -1,0 +1,74 @@
+[
+  {
+    "crop": "Pasture/cereal for grazing",
+    "mdb_ha": 284345,
+    "mdb_ml": 740592,
+    "nat_ha": 495779,
+    "nat_ml": 1429495,
+    "ha_share": 0.574,
+    "ml_share": 0.518
+  },
+  {
+    "crop": "Cereals (excl. rice)",
+    "mdb_ha": 275989,
+    "mdb_ml": 588817,
+    "nat_ha": 320093,
+    "nat_ml": 718870,
+    "ha_share": 0.862,
+    "ml_share": 0.819
+  },
+  {
+    "crop": "Cotton",
+    "mdb_ha": 182669,
+    "mdb_ml": 1232969,
+    "nat_ha": 197401,
+    "nat_ml": 1326321,
+    "ha_share": 0.925,
+    "ml_share": 0.93
+  },
+  {
+    "crop": "Pasture/cereal for hay & silage",
+    "mdb_ha": 124279,
+    "mdb_ml": 359290,
+    "nat_ha": 210391,
+    "nat_ml": 664712,
+    "ha_share": 0.591,
+    "ml_share": 0.541
+  },
+  {
+    "crop": "Fruit & nut (excl. grapes)",
+    "mdb_ha": 116087,
+    "mdb_ml": 798823,
+    "nat_ha": 196906,
+    "nat_ml": 1127108,
+    "ha_share": 0.59,
+    "ml_share": 0.709
+  },
+  {
+    "crop": "Grapevines",
+    "mdb_ha": 80014,
+    "mdb_ml": 417627,
+    "nat_ha": 130534,
+    "nat_ml": 516550,
+    "ha_share": 0.613,
+    "ml_share": 0.808
+  },
+  {
+    "crop": "Rice",
+    "mdb_ha": 43764,
+    "mdb_ml": 530063,
+    "nat_ha": 45084,
+    "nat_ml": 538365,
+    "ha_share": 0.971,
+    "ml_share": 0.985
+  },
+  {
+    "crop": "Vegetables",
+    "mdb_ha": 20904,
+    "mdb_ml": 87369,
+    "nat_ha": 98785,
+    "nat_ml": 382626,
+    "ha_share": 0.212,
+    "ml_share": 0.228
+  }
+]

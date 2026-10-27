@@ -1,0 +1,62 @@
+[
+  {
+    "source": "Irrigation channels or pipelines",
+    "year": "2019-20",
+    "thousand_ml": 2241
+  },
+  {
+    "source": "Irrigation channels or pipelines",
+    "year": "2020-21",
+    "thousand_ml": 3385
+  },
+  {
+    "source": "Rivers, creeks, lakes",
+    "year": "2019-20",
+    "thousand_ml": 1406
+  },
+  {
+    "source": "Rivers, creeks, lakes",
+    "year": "2020-21",
+    "thousand_ml": 2185
+  },
+  {
+    "source": "Groundwater (bores, springs, wells)",
+    "year": "2019-20",
+    "thousand_ml": 2104
+  },
+  {
+    "source": "Groundwater (bores, springs, wells)",
+    "year": "2020-21",
+    "thousand_ml": 1748
+  },
+  {
+    "source": "On-farm dams or tanks",
+    "year": "2019-20",
+    "thousand_ml": 541
+  },
+  {
+    "source": "On-farm dams or tanks",
+    "year": "2020-21",
+    "thousand_ml": 617
+  },
+  {
+    "source": "Recycled/re-used water",
+    "year": "2019-20",
+    "thousand_ml": 124
+  },
+  {
+    "source": "Recycled/re-used water",
+    "year": "2020-21",
+    "thousand_ml": 135
+  },
+  {
+    "source": "Town mains supply",
+    "year": "2019-20",
+    "thousand_ml": 43
+  },
+  {
+    "source": "Town mains supply",
+    "year": "2020-21",
+    "thousand_ml": 20
+  }
+]
